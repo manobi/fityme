@@ -4,10 +4,13 @@
 
 A Stylus library to generate skeleton screens, through svg placeholder as data URI background in order to help you improve the perceived loading time of your apps.
 
+----
+
 ## Usage
 ```bash
 npm install --save-dev fityme
 ```
+
 **CODE**
 
 ```stylus
@@ -27,13 +30,17 @@ body
 **GENERATES**
 
 <svg xmlns='http://www.w3.org/2000/svg' width='318' height='198'>
-<rect rx='0' ry='0' fill='#fff' x='0' y='8' width='100%' height='100%' transform='translate(0, 0)' /> <rect rx='0' ry='0' fill='#ccc' x='50%' y='16' width='200' height='120' transform='translate(-100, 0)' /> <rect rx='0' ry='0' fill='#eee' x='50%' y='148' width='270' height='16' transform='translate(-135, 0)' /> <rect rx='0' ry='0' fill='#eee' x='50%' y='168' width='220' height='16' transform='translate(-110, 0)' /></svg>
+    <rect rx='0' ry='0' fill='#fff' x='0' y='8' width='100%' height='100%' transform='translate(0, 0)' /> 
+    <rect rx='0' ry='0' fill='#ccc' x='50%' y='16' width='200' height='120' transform='translate(-100, 0)' /> 
+    <rect rx='0' ry='0' fill='#eee' x='50%' y='148' width='270' height='16' transform='translate(-135, 0)' /> 
+    <rect rx='0' ry='0' fill='#eee' x='50%' y='168' width='220' height='16' transform='translate(-110, 0)' />
+</svg>
 
 PS: No matter what impossible situation you are dealing with, you might always *FITIMY*
 
 ## API - bultin functions
 
-### fitimy(x, y, content)
+### fityme(x, y, content)
 
 ### rect(width, height, x, y)
 

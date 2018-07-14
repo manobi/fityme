@@ -1,0 +1,33 @@
+/*
+* Fityme - Fake it till you make it
+* Stylus library to generate skeleton screen and improve your perceived performance
+*/
+
+encoding = "data:image/svg+xml;utf8,"
+url = "http://www.w3.org/2000/svg"
+
+svg(w, h, args...)
+    encoding + "<svg xmlns='http://www.w3.org/2000/svg' width='" + w + "' height='" + h + "'>" + args + "</svg>"
+
+rect(wdth, hght, x, y, fill, radius = 0)
+    transf = none
+    transX = 0
+    transY = 0
+    if x == center
+        x = 50%
+        transX = wdth/2
+
+    if y == center
+        y = 50%
+        transY = hght/2
+
+    if y == bottom
+        y = 100%
+        transY = hght
+    
+    transf = translate(-(transX), -(transY))
+
+    "<rect rx='"+ radius + "' ry='" + radius + "' fill='" + fill + "' x='" + x + "' y='" + y + "' width='" + wdth + "' height='" + hght + "' transform='" + transf + "' />"
+
+sqr(size, x, y, fill)
+    rect(size, size, x, y, fill)
