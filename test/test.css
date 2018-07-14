@@ -10,18 +10,6 @@
 .ft-videos {
   background: #eee url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='208'><rect rx='0' ry='0' fill='#ccc' x='8' y='8' width='100%' height='120' transform='translate(0, 0)' /> <rect rx='0' ry='0' fill='#ccc' x='8' y='138' width='100%' height='30' transform='translate(0, 0)' /> <rect rx='0' ry='0' fill='#ccc' x='8' y='100%' width='60%' height='30' transform='translate(0, -30)' /></svg>");
 }
-.ft-full {
-  background-size: cover;
-}
-.ft-single {
-  background-repeat: no-repeat;
-}
-.ft-single-row {
-  background-repeat: repeat-x;
-}
-.ft-single-column {
-  background-repeat: repeat-y;
-}
 .ft-1:empty {
   background-size: 100%;
 }
@@ -149,6 +137,18 @@
   .ft-xs-8:empty {
     background-size: 12.5%;
   }
+}
+.ft-full:empty {
+  background-size: cover;
+}
+.ft-single:empty {
+  background-repeat: no-repeat;
+}
+.ft-single-row:empty {
+  background-repeat: repeat-x;
+}
+.ft-single-column:empty {
+  background-repeat: repeat-y;
 }
 body {
   max-width: 1200px;

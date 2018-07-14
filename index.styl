@@ -166,18 +166,6 @@ cols(prefix = '')
         &:empty
             background-size 12.5%
 
-.ft-full
-    background-size cover
-
-.ft-single
-    background-repeat no-repeat
-
-.ft-single-row
-    background-repeat repeat-x
-
-.ft-single-column
-    background-repeat repeat-y
-
 /*
 * Standard collumns 
 */
@@ -206,3 +194,31 @@ cols('.ft-')
 */
 @media(max-width: 576px)
     cols('.ft-xs-')
+
+/*
+* Forces the placeholder to be full screen
+*/
+.ft-full
+    &:empty
+        background-size cover
+
+/*
+* Restric the skeletons to only one
+*/
+.ft-single
+    &:empty
+        background-repeat no-repeat
+
+/*
+* Allow only one row of skeletons
+*/
+.ft-single-row
+    &:empty
+        background-repeat repeat-x
+
+/*
+* Allow only one column of skeletons
+*/
+.ft-single-column
+    &:empty
+        background-repeat repeat-y
