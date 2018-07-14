@@ -3,16 +3,33 @@
 * Stylus library to generate skeleton screen and improve your perceived performance
 */
 
+// Encoding 
 encoding = "data:image/svg+xml;utf8,"
 url = "http://www.w3.org/2000/svg"
 
+/*
+* @func fityme
+* @param {number} w - Width of svg canvas
+* @param {number} h - Height of svg canvas
+* @param {number} args.. - All your content, you can pass as params as you want like circles, squares or rectangles
+* @returns {string} svg - SVG tag with it's encoding and all it's childs
+*/
 fityme(w, h, args...)
     encoding + "<svg xmlns='http://www.w3.org/2000/svg' width='" + w + "' height='" + h + "'>" + args + "</svg>"
 
-rect(wdth, hght, x, y, fill, radius = 0)
+/*
+* @func layout - A helper function to define the positioning of each shape
+* @param {number} wdth - Width of shape to use in calculations
+* @param {number} hght - Height of shape to use in calculations
+* @param {number} x - Horizontal positioning of shape
+* @param {number} y - Vertical positioning of shape
+* @returns {array} cordinates - a list of 3 values 1. Calculated X position, 2. Calculates Y position and 3. translates to align the shape
+*/
+layout(wdth, hght, x, y,)
     transf = none
     transX = 0
     transY = 0
+    
     if x == center
         x = 50%
         transX = wdth/2
@@ -24,13 +41,51 @@ rect(wdth, hght, x, y, fill, radius = 0)
     if y == bottom
         y = 100%
         transY = hght
-    
-    transf = translate(-(transX), -(transY))
 
-    "<rect rx='"+ radius + "' ry='" + radius + "' fill='" + fill + "' x='" + x + "' y='" + y + "' width='" + wdth + "' height='" + hght + "' transform='" + transf + "' />"
+    return x y translate(-(transX), -(transY))
 
+/*
+* @func layout - Draws a rectangle
+* @param {number} wdth - Width of shape
+* @param {number} hght - Height of shape
+* @param {number} x - Horizontal positioning of shape
+* @param {number} y - Vertical positioning of shape
+* @returns {string} tag - A complete rect svg tag
+*/
+rect(wdth = 100%, hght = auto, x = 0, y = 0, fill = #ccc, radius = 0)
+    positions = layout(wdth, hght, x, y)
+    x = positions[0]
+    y = positions[1]
+    trans = positions[2]
+
+    "<rect rx='" + radius + "' ry='" + radius + "' fill='" + fill + "' x='" + x + "' y='" + y + "' width='" + wdth + "' height='" + hght + "' transform='" + trans + "' />"
+
+/*
+* @func layout - Draws a square
+* @param {number} size - Width of shape
+* @param {number} x - Horizontal positioning of shape
+* @param {number} y - Vertical positioning of shape
+* @returns {string} tag - A complete rect svg tag since a square is a rectangle with all sides equal
+*/
 sqr(size, x, y, fill)
     rect(size, size, x, y, fill)
+
+/*
+* @func layout - Draws a circle
+* @param {number} size - Width of shape
+* @param {number} x - Horizontal positioning of shape
+* @param {number} y - Vertical positioning of shape
+* @returns {string} tag - A svg cricle tag
+*/
+circle(size, x, y, fill)
+    half = size / 2
+    positions = layout(size, size, x + size, y + size)
+
+    x = positions[0]
+    y = positions[1]
+    trans = positions[2]
+
+    "<circle fill='" + fill + "' cx='" + x + "' cy='" + y + "' r='" + size + "' transform='" + trans + "' />"
 
 /*
 * ft-products
@@ -58,6 +113,15 @@ sqr(size, x, y, fill)
                 rect(70%, 16, 16, 140, #eee),
                 rect(80%, 16, 16, 180, #eee),
                 rect(50%, 16, 16, 216, #eee)
+            )
+        );
+
+.ft-profile
+    background #eee url(
+            fityme(200, 200,
+                circle(30, 16, 16, #ccc),
+                rect(100, 8, 90, 30, #ccc), 
+                rect(90, 8, 90, 50, #ccc)
             )
         );
 
