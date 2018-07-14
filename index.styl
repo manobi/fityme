@@ -31,3 +31,114 @@ rect(wdth, hght, x, y, fill, radius = 0)
 
 sqr(size, x, y, fill)
     rect(size, size, x, y, fill)
+
+/*
+* ft-products
+*/
+.ft-products
+    background #eee url(
+            fityme(318, 198, 
+                rect(100%, 100%, 0, 8, #ffffff), 
+                rect(200, 120, center, 16, #ccc),
+                rect(270, 16, center, 148, #eee), 
+                rect(220, 16, center, 168, #eee)
+            )
+        );
+
+/*
+* ft-posts
+*/
+.ft-posts
+    background #eee url(
+            fityme(100%, 300, 
+                rect(100%, 100%, 0, 8, #ffffff), 
+                sqr(100, 16, 16, #ccc),
+                rect(20%, 16, 126, 24, #eee), 
+                rect(15%, 16, 126, 72, #eee), 
+                rect(70%, 16, 16, 140, #eee),
+                rect(80%, 16, 16, 180, #eee),
+                rect(50%, 16, 16, 216, #eee)
+            )
+        );
+
+/*
+* ft.videos
+*/
+.ft-videos
+    background #eee url(
+            fityme(300, 208, 
+                rect(100%, 120, 8, 8, #ccc),
+                rect(100%, 30, 8, 138, #ccc), 
+                rect(60%, 30, 8, bottom, #ccc)
+            )
+        );
+
+/*
+* Columns generator
+*/
+cols(prefix = '')
+    {prefix}1
+        &:empty
+            background-size 100%
+    {prefix}2
+        &:empty
+            background-size 50%
+    {prefix}3
+        &:empty
+            background-size 33.333%
+    {prefix}4
+        &:empty
+            background-size 25%
+    {prefix}5
+        &:empty
+            background-size 20%
+    {prefix}6
+        &:empty
+            background-size 16%
+    {prefix}7
+        &:empty
+            background-size 14.285%
+    {prefix}8
+        &:empty
+            background-size 12.5%
+
+.ft-full
+    background-size cover
+
+.ft-single
+    background-repeat no-repeat
+
+.ft-single-row
+    background-repeat repeat-x
+
+.ft-single-column
+    background-repeat repeat-y
+
+/*
+* Standard collumns 
+*/
+cols('.ft-')
+
+/*
+* Large screens
+*/
+@media(max-width: 1200px)
+    cols('.ft-xl-')
+
+/*
+* Medium screens
+*/
+@media(max-width: 992px)
+    cols('.ft-md-')
+
+/*
+* Small screen
+*/
+@media(max-width: 768px)
+    cols('.ft-sm-')
+
+/*
+* Extra small screens
+*/
+@media(max-width: 576px)
+    cols('.ft-xs-')

@@ -1,30 +1,156 @@
-/*
-* Draw the card
-*/
-.standard {
+.ft-products {
   background: #eee url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='318' height='198'><rect rx='0' ry='0' fill='#fff' x='0' y='8' width='100%' height='100%' transform='translate(0, 0)' /> <rect rx='0' ry='0' fill='#ccc' x='50%' y='16' width='200' height='120' transform='translate(-100, 0)' /> <rect rx='0' ry='0' fill='#eee' x='50%' y='148' width='270' height='16' transform='translate(-135, 0)' /> <rect rx='0' ry='0' fill='#eee' x='50%' y='168' width='220' height='16' transform='translate(-110, 0)' /></svg>");
-  background-repeat: repeat;
-  min-height: 100vh;
 }
-/*
-* Control it
-*/
-.control {
-  background: #eee url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='318' height='198'><rect rx='0' ry='0' fill='#fff' x='0' y='8' width='100%' height='100%' transform='translate(0, 0)' /> <rect rx='0' ry='0' fill='#ccc' x='50%' y='16' width='200' height='120' transform='translate(-100, 0)' /> <rect rx='0' ry='0' fill='#eee' x='50%' y='148' width='270' height='16' transform='translate(-135, 0)' /> <rect rx='0' ry='0' fill='#eee' x='50%' y='168' width='220' height='16' transform='translate(-110, 0)' /></svg>");
-  background-size: 33.333%;
-  background-repeat: repeat;
-  min-height: 100vh;
-}
-/*
-* Control it
-*/
-.facebook {
+.ft-posts {
   background: #eee url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='300'><rect rx='0' ry='0' fill='#fff' x='0' y='8' width='100%' height='100%' transform='translate(0, 0)' /> <rect rx='0' ry='0' fill='#ccc' x='16' y='16' width='100' height='100' transform='translate(0, 0)' /> <rect rx='0' ry='0' fill='#eee' x='126' y='24' width='20%' height='16' transform='translate(0, 0)' /> <rect rx='0' ry='0' fill='#eee' x='126' y='72' width='15%' height='16' transform='translate(0, 0)' /> <rect rx='0' ry='0' fill='#eee' x='16' y='140' width='70%' height='16' transform='translate(0, 0)' /> <rect rx='0' ry='0' fill='#eee' x='16' y='180' width='80%' height='16' transform='translate(0, 0)' /> <rect rx='0' ry='0' fill='#eee' x='16' y='216' width='50%' height='16' transform='translate(0, 0)' /></svg>");
-  min-height: 100vh;
 }
-.youtube {
+.ft-videos {
   background: #eee url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='208'><rect rx='0' ry='0' fill='#ccc' x='8' y='8' width='100%' height='120' transform='translate(0, 0)' /> <rect rx='0' ry='0' fill='#ccc' x='8' y='138' width='100%' height='30' transform='translate(0, 0)' /> <rect rx='0' ry='0' fill='#ccc' x='8' y='100%' width='60%' height='30' transform='translate(0, -30)' /></svg>");
-  background-size: 20%;
+}
+.ft-full {
+  background-size: cover;
+}
+.ft-single {
+  background-repeat: no-repeat;
+}
+.ft-single-row {
   background-repeat: repeat-x;
+}
+.ft-single-column {
+  background-repeat: repeat-y;
+}
+.ft-1:empty {
+  background-size: 100%;
+}
+.ft-2:empty {
+  background-size: 50%;
+}
+.ft-3:empty {
+  background-size: 33.333%;
+}
+.ft-4:empty {
+  background-size: 25%;
+}
+.ft-5:empty {
+  background-size: 20%;
+}
+.ft-6:empty {
+  background-size: 16%;
+}
+.ft-7:empty {
+  background-size: 14.285%;
+}
+.ft-8:empty {
+  background-size: 12.5%;
+}
+@media (max-width: 1200px) {
+  .ft-xl-1:empty {
+    background-size: 100%;
+  }
+  .ft-xl-2:empty {
+    background-size: 50%;
+  }
+  .ft-xl-3:empty {
+    background-size: 33.333%;
+  }
+  .ft-xl-4:empty {
+    background-size: 25%;
+  }
+  .ft-xl-5:empty {
+    background-size: 20%;
+  }
+  .ft-xl-6:empty {
+    background-size: 16%;
+  }
+  .ft-xl-7:empty {
+    background-size: 14.285%;
+  }
+  .ft-xl-8:empty {
+    background-size: 12.5%;
+  }
+}
+@media (max-width: 992px) {
+  .ft-md-1:empty {
+    background-size: 100%;
+  }
+  .ft-md-2:empty {
+    background-size: 50%;
+  }
+  .ft-md-3:empty {
+    background-size: 33.333%;
+  }
+  .ft-md-4:empty {
+    background-size: 25%;
+  }
+  .ft-md-5:empty {
+    background-size: 20%;
+  }
+  .ft-md-6:empty {
+    background-size: 16%;
+  }
+  .ft-md-7:empty {
+    background-size: 14.285%;
+  }
+  .ft-md-8:empty {
+    background-size: 12.5%;
+  }
+}
+@media (max-width: 768px) {
+  .ft-sm-1:empty {
+    background-size: 100%;
+  }
+  .ft-sm-2:empty {
+    background-size: 50%;
+  }
+  .ft-sm-3:empty {
+    background-size: 33.333%;
+  }
+  .ft-sm-4:empty {
+    background-size: 25%;
+  }
+  .ft-sm-5:empty {
+    background-size: 20%;
+  }
+  .ft-sm-6:empty {
+    background-size: 16%;
+  }
+  .ft-sm-7:empty {
+    background-size: 14.285%;
+  }
+  .ft-sm-8:empty {
+    background-size: 12.5%;
+  }
+}
+@media (max-width: 576px) {
+  .ft-xs-1:empty {
+    background-size: 100%;
+  }
+  .ft-xs-2:empty {
+    background-size: 50%;
+  }
+  .ft-xs-3:empty {
+    background-size: 33.333%;
+  }
+  .ft-xs-4:empty {
+    background-size: 25%;
+  }
+  .ft-xs-5:empty {
+    background-size: 20%;
+  }
+  .ft-xs-6:empty {
+    background-size: 16%;
+  }
+  .ft-xs-7:empty {
+    background-size: 14.285%;
+  }
+  .ft-xs-8:empty {
+    background-size: 12.5%;
+  }
+}
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+body > ul {
   min-height: 100vh;
 }

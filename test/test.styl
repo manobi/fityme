@@ -1,61 +1,11 @@
 @require '../index.styl'
 
-/*
-* Draw the card
-*/
-.standard
-    background #eee url(
-            fityme(318, 198, 
-                rect(100%, 100%, 0, 8, #ffffff), 
-                rect(200, 120, center, 16, #ccc),
-                rect(270, 16, center, 148, #eee), 
-                rect(220, 16, center, 168, #eee)
-            )
-        );
-    background-repeat repeat
-    min-height: 100vh
+body
+    max-width 1200px
+    margin 0 auto
+    > ul 
+        min-height: 100vh
 
-/*
-* Control it
-*/
-.control
-    background #eee url(
-            fityme(318, 198, 
-                rect(100%, 100%, 0, 8, #ffffff), 
-                rect(200, 120, center, 16, #ccc),
-                rect(270, 16, center, 148, #eee), 
-                rect(220, 16, center, 168, #eee)
-            )
-        );
-    background-size: 33.333%
-    background-repeat repeat
-    min-height: 100vh
 
-/*
-* Control it
-*/
-.facebook
-    background #eee url(
-            fityme(100%, 300, 
-                rect(100%, 100%, 0, 8, #ffffff), 
-                sqr(100, 16, 16, #ccc),
-                rect(20%, 16, 126, 24, #eee), 
-                rect(15%, 16, 126, 72, #eee), 
-                rect(70%, 16, 16, 140, #eee),
-                rect(80%, 16, 16, 180, #eee),
-                rect(50%, 16, 16, 216, #eee)
-            )
-        );
-    min-height: 100vh
 
-.youtube
-    background #eee url(
-            fityme(300, 208, 
-                rect(100%, 120, 8, 8, #ccc),
-                rect(100%, 30, 8, 138, #ccc), 
-                rect(60%, 30, 8, bottom, #ccc)
-            )
-        );
-    background-size 20%
-    background-repeat repeat-x
-    min-height: 100vh
+
