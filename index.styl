@@ -6,6 +6,9 @@
 // Encoding 
 encoding = "data:image/svg+xml;utf8,"
 url = "http://www.w3.org/2000/svg"
+gradient = "<linearGradient id='shiny'><stop offset='0%'  stop-color='white'></stop><stop offset='50%' stop-color='black'><animate attributeName='offset' from='-1' to='1' dur='2.5s' repeatCount='indefinite' /></stop><stop offset='100%'  stop-color='white'></stop></linearGradient>"
+mask = "<mask id='shining'><rect x='0' y='0' width='200%' height='100%' fill='url(#shiny)' /></mask>"
+defs = "<defs>" + gradient + mask "</defs>"
 
 /*
 * @func fityme
@@ -15,7 +18,7 @@ url = "http://www.w3.org/2000/svg"
 * @returns {string} svg - SVG tag with it's encoding and all it's childs
 */
 fityme(w, h, args...)
-    encoding + "<svg xmlns='http://www.w3.org/2000/svg' width='" + w + "' height='" + h + "'>" + args + "</svg>"
+    encoding + "<svg xmlns='http://www.w3.org/2000/svg' width='" + w + "' height='" + h + "'>" + defs + args + "</svg>"
 
 /*
 * @func layout - A helper function to define the positioning of each shape
@@ -52,12 +55,12 @@ layout(wdth, hght, x, y,)
 * @param {number} y - Vertical positioning of shape
 * @returns {string} tag - A complete rect svg tag
 */
-rect(wdth = 100%, hght = auto, x = 0, y = 0, fill = #ccc, radius = 0)
+rect(wdth = 100%, hght = auto, x = 0, y = 0, fill = #ccc, radius = 0,)
     positions = layout(wdth, hght, x, y)
     x = positions[0]
     y = positions[1]
     trans = positions[2]
-
+    
     "<rect rx='" + radius + "' ry='" + radius + "' fill='" + fill + "' x='" + x + "' y='" + y + "' width='" + wdth + "' height='" + hght + "' transform='" + trans + "' />"
 
 /*
