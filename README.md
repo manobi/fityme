@@ -59,7 +59,7 @@ Draw a circle
 ### ft-x
 Define the number of times a card can be repeated.
 
-#### ft-xs-x
+### ft-xs-x
 For extra small screens, define the number of times a card can be repeated.
 
 ### ft-sm-x
