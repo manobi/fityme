@@ -11,8 +11,6 @@ A Stylus library to generate skeleton screens, through svg placeholder as data U
 npm install --save-dev fityme
 ```
 
-**CODE**
-
 ```stylus
 @require './node_modules/fityme/index.styl'
 
@@ -36,24 +34,56 @@ body
     <rect rx='0' ry='0' fill='#eee' x='50%' y='168' width='220' height='16' transform='translate(-110, 0)' />
 </svg>
 
-PS: No matter what impossible situation you are dealing with, you might always *FITIMY*
+> No matter what impossible situation you are dealing with, you might always *FITIMY*
 
-## API - bultin functions
+----------
+
+## API
 
 ### fityme(x, y, content)
+Generates the card canvas
 
 ### rect(width, height, x, y)
+Draw a rectangle
 
 ### sqr(size, x, y)
+Draw a square
 
 ### crc(size, x, y)
-
-## Examples
-
-### Stride
-
-### Youtube
-
-### Facebook
+Draw a circle
 
 
+## Helper classes
+
+### ft-x
+Define the number of times a card can be repeated.
+
+## ft-xs-x
+For extra small screens, define the number of times a card can be repeated.
+
+## ft-sm-x
+For small screens, define the number of times a card can be repeated.
+
+## ft-md-x
+For medium sizes screens, define the number of times a card can be repeated.
+
+## ft-lg-x
+Define the number of times a card can be repeated on large sizes screens.
+
+### .ft-single
+Restrict the the num of cards to only one.
+
+### .ft-single-row
+Allow only a single row of cards.
+
+### .ft-single-column
+Allow only a single column of cards.
+
+### .ft-full
+Makes one only card to extend itself until it fit the entire block.
+
+------
+
+## Contribute
+Please let me know of the bugs you find. 
+Don't like Stylus? fell free to port it to your favorite stylesheet processing language, mas let me know so I can improve this project by learn from your proccess.
