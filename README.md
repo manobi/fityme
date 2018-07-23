@@ -35,53 +35,97 @@ body {
 }
 ```
 
-> No matter what impossible situation you are dealing with, you might always *FITIMY*
+> No matter what impossible situation you are dealing with, you might always **FITIMY**.
 
 ----------
 
 ## API
 
 ### fityme(x, y, content)
-Generates the card canvas
+Generates the card canvas.
+```stylus
+fityme(318, 198, ...content)
+```
 
-### rect(width, height, x, y)
+### rect(wdth = 100%, hght = auto, x = 0, y = 0, fill = #ccc, radius = 0, anim = false)
 Draw a rectangle
+```stylus
+rect(200, 120, center, 16, #ccc, 5, true),
+```
 
 ### sqr(size, x, y)
 Draw a square
-
+```stylus
+square(200, ...)
+```
 ### crc(size, x, y)
 Draw a circle
-
+```stylus
+circle(200, ...)
+```
 
 ## Helper classes
 
 ### ft-x
-Define the number of times a card can be repeated.
+Define the number of times a card can be repeated based on a 8 columns grid.
+```html
+<ul class="ft-products ft-3"></ul>
+```
 
 ### ft-xs-x
 For extra small screens, define the number of times a card can be repeated.
+```html
+<!-- forces it to show only one card on extra small screens -->
+<ul class="ft-products ft-3 ft-xs-1"></ul>
+```
 
 ### ft-sm-x
 For small screens, define the number of times a card can be repeated.
+```html
+<!-- To show two card on extra small screens, intead of the default set to 3 -->
+<ul class="ft-products ft-3 ft-sm-2"></ul>
+```
 
 ### ft-md-x
 For medium sizes screens, define the number of times a card can be repeated.
+For small screens, define the number of times a card can be repeated.
+```html
+<!-- To show 5 cards on medium sizes screen -->
+<ul class="ft-products ft-md-5"></ul>
+```
 
 ### ft-lg-x
 Define the number of times a card can be repeated on large sizes screens.
+For large screens, define the number of times a card can be repeated.
+```html
+<!-- For large screen limit the number -->
+<ul class="ft-products ft-lg-5"></ul>
+```
 
 ### .ft-single
 Restrict the the num of cards to only one.
+```html
+<!-- Only one card no matter what screen size --> 
+<ul class="ft-products ft-single"></ul>
+```
 
 ### .ft-single-row
 Allow only a single row of cards.
+```html
+<ul class="ft-products ft-single-row"></ul>
+```
 
 ### .ft-single-column
 Allow only a single column of cards.
+```html
+<ul class="ft-products ft-ingle-column"></ul>
+```
 
 ### .ft-full
 Makes one only card to extend itself until it fit the entire block.
+```html
+<ul class="ft-products ft-full"></ul>
+```
 
 ------
 
