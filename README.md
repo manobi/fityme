@@ -67,7 +67,7 @@ circle(200, ...)
 ## Helper classes
 
 ### ft-x
-Define the number of times a card can be repeated based on a 8 columns grid.
+Define the number of times a card can be repeated based on a **8 columns grid**.
 ```html
 <ul class="ft-products ft-3"></ul>
 ```
