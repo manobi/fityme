@@ -35,6 +35,8 @@ body {
 }
 ```
 
+![Alt text](./demo/readme.svg)
+
 > No matter what impossible situation you are dealing with, you might always **FITIMY**.
 
 ----------
