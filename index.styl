@@ -6,9 +6,9 @@
 // Encoding 
 encoding = "data:image/svg+xml;utf8,"
 url = "http://www.w3.org/2000/svg"
-gradient = "<linearGradient id='shiny'><stop offset='0%'  stop-color='white'></stop><stop offset='50%' stop-color='black'><animate attributeName='offset' from='-1' to='1' dur='2.5s' repeatCount='indefinite' /></stop><stop offset='100%'  stop-color='white'></stop></linearGradient>"
+gradient = "<linearGradient id='shiny'><stop offset='0%' stop-color='white'></stop><stop offset='100%' stop-color='black'><animate attributeName='offset' from='0' to='1' dur='2.5s' repeatCount='indefinite' /></stop><stop offset='100%' stop-color='white'></stop></linearGradient>"
 mask = "<mask id='shining'><rect x='0' y='0' width='200%' height='100%' fill='url(#shiny)' /></mask>"
-defs = "<defs>" + gradient + mask "</defs>"
+defs = "<defs>" + gradient + mask + "</defs>"
 
 /*
 * @func fityme
@@ -47,6 +47,30 @@ layout(wdth, hght, x, y,)
 
     return x y translate(-(transX), -(transY))
 
+render(tag, wdth, hght, positions, fill, radius, anim)
+    x = positions[0]
+    y = positions[1]
+    trans = positions[2]
+    
+    tween = ""
+
+    if anim
+        tween = "mask='url(#shining)' "
+    
+    space = " "
+
+    open  = "<" //: rect
+    rx    =     "rx='" + radius + "' "
+    fill  =     "fill='" + fill + "' "
+    x     =     "x='" + x + "' "
+    y     =     "y='" + y + "' "
+    wdth  =     "width='" + wdth + "' "
+    hght  =     "height='" + hght + "' "
+    trans =     "transform='" + trans + "' "
+    close = "/>"
+
+    open + tag + space + tween + rx + fill + x + y + trans + wdth + hght + close
+
 /*
 * @func layout - Draws a rectangle
 * @param {number} wdth - Width of shape
@@ -55,14 +79,10 @@ layout(wdth, hght, x, y,)
 * @param {number} y - Vertical positioning of shape
 * @returns {string} tag - A complete rect svg tag
 */
-rect(wdth = 100%, hght = auto, x = 0, y = 0, fill = #ccc, radius = 0,)
+rect(wdth = 100%, hght = auto, x = 0, y = 0, fill = #ccc, radius = 0, anim = false)
     positions = layout(wdth, hght, x, y)
-    x = positions[0]
-    y = positions[1]
-    trans = positions[2]
+    render("rect", wdth, hght, positions, fill, radius, anim)
     
-    "<rect rx='" + radius + "' ry='" + radius + "' fill='" + fill + "' x='" + x + "' y='" + y + "' width='" + wdth + "' height='" + hght + "' transform='" + trans + "' />"
-
 /*
 * @func layout - Draws a square
 * @param {number} size - Width of shape
@@ -80,14 +100,14 @@ sqr(size, x, y, fill)
 * @param {number} y - Vertical positioning of shape
 * @returns {string} tag - A svg cricle tag
 */
-circle(size, x, y, fill)
+circle(size, x, y, fill, anim = false)
     half = size / 2
     positions = layout(size, size, x + size, y + size)
 
     x = positions[0]
     y = positions[1]
     trans = positions[2]
-
+    
     "<circle fill='" + fill + "' cx='" + x + "' cy='" + y + "' r='" + size + "' transform='" + trans + "' />"
 
 /*
@@ -97,7 +117,7 @@ circle(size, x, y, fill)
     background #eee url(
             fityme(318, 198, 
                 rect(100%, 100%, 0, 8, #ffffff), 
-                rect(200, 120, center, 16, #ccc),
+                rect(200, 120, center, 16, #ccc, 5, true),
                 rect(270, 16, center, 148, #eee), 
                 rect(220, 16, center, 168, #eee)
             )
