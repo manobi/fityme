@@ -1,4 +1,4 @@
-# FITYME
+# [FITYME](https://manobi.github.io/fityme)
 
 > FITYME stands for **"Fake it til you make it"**
 
@@ -28,6 +28,8 @@ body
         )
     );
 ```
+
+[CHECKOUT MORE DEMOS](https://manobi.github.io/fityme/)
 
 > No matter what impossible situation you are dealing with, you might always **FITIMY**.
 
