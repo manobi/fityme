@@ -18,7 +18,11 @@ defs = "<defs>" + gradient + mask + "</defs>"
 * @returns {string} svg - SVG tag with it's encoding and all it's childs
 */
 fityme(w, h, args...)
-    encoding + "<svg xmlns='http://www.w3.org/2000/svg' width='" + w + "' height='" + h + "'>" + defs + args + "</svg>"
+    tag = "<svg xmlns='http://www.w3.org/2000/svg' width='" + w + "' height='" + h + "'>" + defs + args + "</svg>"
+    p('\n')
+    p('FITYME card generated:')
+    p(tag)
+    encoding + tag
 
 /*
 * @func layout - A helper function to define the positioning of each shape
@@ -109,7 +113,7 @@ circle(size, x, y, fill, anim = false)
     trans = positions[2]
     
     "<circle fill='" + fill + "' cx='" + x + "' cy='" + y + "' r='" + size + "' transform='" + trans + "' />"
-    
+
 /*
 * Columns generator
 */
