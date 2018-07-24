@@ -28,13 +28,6 @@ body
 ```
 
 Outputs:
-
-```css
-body {
-  background: #eee url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='318' height='198'><defs><linearGradient id='shiny'><stop offset='0%' stop-color='white'></stop><stop offset='100%' stop-color='black'><animate attributeName='offset' from='0' to='1' dur='2.5s' repeatCount='indefinite' /></stop><stop offset='100%' stop-color='white'></stop></linearGradient><mask id='shining'><rect x='0' y='0' width='200%' height='100%' fill='url(#shiny)' /></mask></defs><rect rx='0' fill='#fff' x='0' y='8' transform='translate(0, 0)' width='100%' height='100%' /> <rect mask='url(#shining)' rx='5' fill='#ccc' x='50%' y='16' transform='translate(-100, 0)' width='200' height='120' /> <rect rx='0' fill='#eee' x='50%' y='148' transform='translate(-135, 0)' width='270' height='16' /> <rect rx='0' fill='#eee' x='50%' y='168' transform='translate(-110, 0)' width='220' height='16' /></svg>");
-}
-```
-
 ![Alt text](./demo/readme.svg)
 
 * [Helper classes](#)
