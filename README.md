@@ -31,8 +31,8 @@ Outputs:
 
 ![Alt text](./demo/readme.svg)
 
-* [Helper classes](#)
-* [API](#)
+* [Helper classes](#helper-classes)
+* [API](#api)
 
 > No matter what impossible situation you are dealing with, you might always **FITIMY**.
 
