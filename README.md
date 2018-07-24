@@ -70,39 +70,30 @@ circle(200, ...)
 
 ### ft-x
 Define the number of times a card can be repeated based on a **8 columns grid**.
+You can even combine some classes, to dictate how the cards will be rendered o different screen sizes.
+
+To repeat the card created before (.ft-products) 3 times do the following:
 ```html
 <ul class="ft-products ft-3"></ul>
 ```
 
-### ft-xs-x
-For extra small screens, define the number of times a card can be repeated.
+If you want to change how many times the card will show on extra small screens:
 ```html
-<!-- forces it to show only one card on extra small screens -->
 <ul class="ft-products ft-3 ft-xs-1"></ul>
 ```
 
-### ft-sm-x
-For small screens, define the number of times a card can be repeated.
-```html
-<!-- To show two card on extra small screens, intead of the default set to 3 -->
-<ul class="ft-products ft-3 ft-sm-2"></ul>
-```
+All options available:
 
-### ft-md-x
-For medium sizes screens, define the number of times a card can be repeated.
-For small screens, define the number of times a card can be repeated.
-```html
-<!-- To show 5 cards on medium sizes screen -->
-<ul class="ft-products ft-md-5"></ul>
-```
-
-### ft-lg-x
-Define the number of times a card can be repeated on large sizes screens.
-For large screens, define the number of times a card can be repeated.
-```html
-<!-- For large screen limit the number -->
-<ul class="ft-products ft-lg-5"></ul>
-```
+| Repeat-(n) | Extra Small Screen | Small screen | Medium screens | Large screens |   
+| -----------| ------------------ |------------- |--------------- |-------------- |
+| .ft-1      | .ft-xs-1           | .ft-sm-1     | .ft-md-1       | .ft-lg-1      |
+| .ft-2      | .ft-xs-2           | .ft-sm-2     | .ft-md-2       | .ft-lg-2      |
+| .ft-3      | .ft-xs-3           | .ft-sm-3     | .ft-md-3       | .ft-lg-3      |
+| .ft-4      | .ft-xs-4           | .ft-sm-4     | .ft-md-4       | .ft-lg-4      |
+| .ft-5      | .ft-xs-5           | .ft-sm-5     | .ft-md-5       | .ft-lg-5      |
+| .ft-6      | .ft-xs-6           | .ft-sm-6     | .ft-md-6       | .ft-lg-6      |
+| .ft-7      | .ft-xs-7           | .ft-sm-7     | .ft-md-7       | .ft-lg-7      |
+| .ft-8      | .ft-xs-8           | .ft-sm-8     | .ft-md-8       | .ft-lg-8      |
 
 ### .ft-single
 Restrict the the num of cards to only one.
