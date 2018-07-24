@@ -2,7 +2,9 @@
 
 > FITYME stands for **"Fake it til you make it"**
 
-A Stylus library to generate skeleton screens, through svg placeholder as data URI background in order to help you improve the perceived loading time of your apps.
+A Stylus library to generate skeleton screens, through svg placeholder as data URI background. 
+
+It will help you improve the perceived loading time of your apps.
 
 ----
 
