@@ -13,7 +13,7 @@ npm install --save-dev fityme
 
 ![Alt text](./demo/readme.svg)
 
-The above card can easily generated with the following code:
+The above card can be easily generated with the following code:
 
 ```stylus
 @require './node_modules/fityme'
@@ -29,10 +29,10 @@ body
     );
 ```
 
+> No matter what impossible situation you are dealing with, you might always **FITIMY**.
+
 * [Helper classes](#helper-classes)
 * [API](#api)
-
-> No matter what impossible situation you are dealing with, you might always **FITIMY**.
 
 ----------
 

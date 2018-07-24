@@ -5,15 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Testing FITYME</title>
+    <link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
     <link rel="stylesheet" href="test.css">
 </head>
 <body>
     <h1>FITYME</h1>
-    <h2>FITYME stands for <strong>Fake til you make it</strong></h2>
+    <h2>or <strong>FAKE IT `TIL YOU MAKE IT</strong> with css</h2>
 
+    <h3>Products</h3>
+    <pre>
+        <code data-language="css">
+            .ft-products
+                background #eee url(
+                    fityme(318, 198, 
+                        rect(100%, 100%, 0, 8, #ffffff), 
+                        rect(200, 120, center, 16, #ccc, 5, true),
+                        rect(270, 16, center, 148, #eee), 
+                        rect(220, 16, center, 168, #eee)
+                    )
+                );
+        </code>
+    </pre>
     <ul class="ft-products ft-3 ft-sm-2 ft-xs-1"></ul>
-    <ul class="ft-posts"></ul>
-    <ul class="ft-profile"></ul>
+    
+    <h3>Videos</h3>
+    <pre>
+        <code data-language="css">
+            .ft-videos
+                background #eee url(
+                    fityme(300, 208, 
+                        rect(100%, 120, 8, 8, #ccc),
+                        rect(100%, 30, 8, 138, #ccc), 
+                        rect(60%, 30, 8, bottom, #ccc)
+                    )
+                );
+        </code>
+    </pre>
     <ul class="ft-videos ft-single-row"></ul>
+    
+    <h3>Posts</h3>
+    <pre>
+            <code data-language="css">
+                .ft-posts
+                    background #eee url(
+                        fityme(100%, 300, 
+                            rect(100%, 100%, 0, 8, #ffffff), 
+                            sqr(100, 16, 16, #ccc),
+                            rect(20%, 16, 126, 24, #eee), 
+                            rect(15%, 16, 126, 72, #eee), 
+                            rect(70%, 16, 16, 140, #eee),
+                            rect(80%, 16, 16, 180, #eee),
+                            rect(50%, 16, 16, 216, #eee)
+                        )
+                    );
+            </code>
+        </pre>
+    <ul class="ft-posts"></ul>
+    
+    <h3>Profiles</h3>
+    <pre>
+        <code data-language="css">
+            .ft-profile
+                background #eee url(
+                    fityme(200, 200,
+                        circle(30, 16, 16, #ccc),
+                        rect(100, 8, 90, 30, #ccc), 
+                        rect(90, 8, 90, 50, #ccc)
+                    )
+                );
+        </code>
+    </pre>
+    <ul class="ft-profile"></ul>
+    
 </body>
 </html>
