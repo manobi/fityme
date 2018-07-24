@@ -11,7 +11,9 @@ A Stylus library to generate skeleton screens, through svg placeholder as data U
 npm install --save-dev fityme
 ```
 
-Require and draw your **card**.
+![Alt text](./demo/readme.svg)
+
+The above card can easily generated with the following code:
 
 ```stylus
 @require './node_modules/fityme'
@@ -26,10 +28,6 @@ body
         )
     );
 ```
-
-Outputs:
-
-![Alt text](./demo/readme.svg)
 
 * [Helper classes](#helper-classes)
 * [API](#api)
