@@ -37,34 +37,12 @@ body {
 
 ![Alt text](./demo/readme.svg)
 
+* [Helper classes](#)
+* [API](#)
+
 > No matter what impossible situation you are dealing with, you might always **FITIMY**.
 
 ----------
-
-## API
-
-### fityme(x, y, content)
-Generates the card canvas.
-```stylus
-fityme(318, 198, ...content)
-```
-
-### rect(wdth = 100%, hght = auto, x = 0, y = 0, fill = #ccc, radius = 0, anim = false)
-Draw a rectangle
-```stylus
-rect(200, 120, center, 16, #ccc, 5, true),
-```
-
-### sqr(size, x, y)
-Draw a square
-```stylus
-square(200, ...)
-```
-### crc(size, x, y)
-Draw a circle
-```stylus
-circle(200, ...)
-```
 
 ## Helper classes
 
@@ -119,6 +97,34 @@ Makes one only card to extend itself until it fit the entire block.
 ```html
 <ul class="ft-products ft-full"></ul>
 ```
+
+----------
+
+## API
+
+### fityme(x, y, content)
+Generates the card canvas.
+```stylus
+fityme(318, 198, ...content)
+```
+
+### rect(wdth = 100%, hght = auto, x = 0, y = 0, fill = #ccc, radius = 0, anim = false)
+Draw a rectangle
+```stylus
+rect(200, 120, center, 16, #ccc, 5, true),
+```
+
+### sqr(size, x, y)
+Draw a square
+```stylus
+square(200, ...)
+```
+### crc(size, x, y)
+Draw a circle
+```stylus
+circle(200, ...)
+```
+
 
 ------
 
