@@ -14,7 +14,7 @@ npm install --save-dev fityme
 Require and draw your **card**.
 
 ```stylus
-@require './node_modules/fityme/index.styl'
+@require './node_modules/fityme'
 
 body
     background #eee url(
