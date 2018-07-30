@@ -4,8 +4,8 @@ body
     max-width 1200px
     margin 0 auto
     font-family: 'Gaegu', cursive;
-    > ul 
-        min-height: 100vh
+
+
 
 h1
     font-size: 50px
@@ -21,6 +21,13 @@ h3
     font-size: 30px 
     font-weight: bold
 
+.sample
+    display: flex
+    flex-flow: row wrap
+    h3
+        flex: 0 0 100%
+    ul
+        flex: 1 1 auto
 
 /*
 * ft-products
@@ -72,6 +79,15 @@ h3
             )
         );
 
+
+.ft-toolbar
+    background blue url(
+            fityme(300, 130,
+                rect(280, 40, 20, 40, rgba(0,0,0,.2), 5, true),
+                circle(20, 40, 90, rgba(0,0,0,.2)),
+                rect(190, 20, 90, 100, rgba(0,0,0,.2))
+            )
+        );
 
 
 
