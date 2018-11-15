@@ -1,6 +1,6 @@
 {
   "name": "fityme",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A Stylus library to generate skeleton screens, through svg placeholder as data URI background in order to help you improve the perceived loading time of your apps.",
   "main": "index.styl",
   "directories": {
