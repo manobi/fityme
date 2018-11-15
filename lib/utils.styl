@@ -1,0 +1,85 @@
+/*
+* Columns generator
+*/
+cols(prefix = '')
+    {prefix}1
+        &:empty
+            background-size 100%
+    {prefix}2
+        &:empty
+            background-size 50%
+    {prefix}3
+        &:empty
+            background-size 33.333%
+    {prefix}4
+        &:empty
+            background-size 25%
+    {prefix}5
+        &:empty
+            background-size 20%
+    {prefix}6
+        &:empty
+            background-size 16%
+    {prefix}7
+        &:empty
+            background-size 14.285%
+    {prefix}8
+        &:empty
+            background-size 12.5%
+
+/*
+* Standard collumns 
+*/
+cols('.ft-')
+
+/*
+* Large screens
+*/
+@media(max-width: 1200px)
+    cols('.ft-xl-')
+
+/*
+* Medium screens
+*/
+@media(max-width: 992px)
+    cols('.ft-md-')
+
+/*
+* Small screen
+*/
+@media(max-width: 768px)
+    cols('.ft-sm-')
+
+/*
+* Extra small screens
+*/
+@media(max-width: 576px)
+    cols('.ft-xs-')
+
+/*
+* Forces the placeholder to be full screen
+*/
+.ft-full
+    &:empty
+        background-size cover
+
+/*
+* Restric the skeletons to only one
+*/
+.ft-single
+    &:empty
+        background-repeat no-repeat
+
+/*
+* Allow only one row of skeletons
+*/
+.ft-single-row
+    &:empty
+        background-repeat repeat-x
+
+/*
+* Allow only one column of skeletons
+*/
+.ft-single-column
+    &:empty
+        background-repeat repeat-y

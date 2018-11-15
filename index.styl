@@ -7,7 +7,7 @@
 encoding = "data:image/svg+xml;utf8,"
 url = "http://www.w3.org/2000/svg"
 gradient = "<linearGradient id='shiny'><stop offset='0%' stop-color='white'></stop><stop offset='100%' stop-color='black'><animate attributeName='offset' from='0' to='1' dur='2.5s' repeatCount='indefinite' /></stop><stop offset='100%' stop-color='white'></stop></linearGradient>"
-mask = "<mask id='shining'><rect x='0' y='0' width='200%' height='100%' fill='url(#shiny)' /></mask>"
+mask = "<mask id='shining'><rect x='0' y='0' width='200%' height='100%' fill='url(%23shiny)' /></mask>"
 defs = "<defs>" + gradient + mask + "</defs>"
 
 /*
@@ -55,17 +55,17 @@ render(tag, wdth, hght, positions, fill, radius, anim)
     x = positions[0]
     y = positions[1]
     trans = positions[2]
-    
+
     tween = ""
 
     if anim
-        tween = "mask='url(#shining)' "
+        tween = "mask='url(%23shining)' "
     
     space = " "
 
     open  = "<" //: rect
     rx    =     "rx='" + radius + "' "
-    fill  =     "fill='" + fill + "' "
+    fill  =     "fill='" + replace('#', '%23', '' + fill) + "' "
     x     =     "x='" + x + "' "
     y     =     "y='" + y + "' "
     wdth  =     "width='" + wdth + "' "
@@ -83,9 +83,9 @@ render(tag, wdth, hght, positions, fill, radius, anim)
 * @param {number} y - Vertical positioning of shape
 * @returns {string} tag - A complete rect svg tag
 */
-rect(wdth = 100%, hght = auto, x = 0, y = 0, fill = #ccc, radius = 0, anim = false)
+rect(wdth = 100%, hght = auto, x = 0, y = 0, fill = '%23ccc', radius = 0, anim = false)
     positions = layout(wdth, hght, x, y)
-    render("rect", wdth, hght, positions, fill, radius, anim)
+    render("rect", wdth, hght, positions, replace('#', '%23', '' + fill), radius, anim)
     
 /*
 * @func layout - Draws a square
@@ -113,89 +113,3 @@ circle(size, x, y, fill, anim = false)
     trans = positions[2]
     
     "<circle fill='" + fill + "' cx='" + x + "' cy='" + y + "' r='" + size + "' transform='" + trans + "' />"
-
-/*
-* Columns generator
-*/
-cols(prefix = '')
-    {prefix}1
-        &:empty
-            background-size 100%
-    {prefix}2
-        &:empty
-            background-size 50%
-    {prefix}3
-        &:empty
-            background-size 33.333%
-    {prefix}4
-        &:empty
-            background-size 25%
-    {prefix}5
-        &:empty
-            background-size 20%
-    {prefix}6
-        &:empty
-            background-size 16%
-    {prefix}7
-        &:empty
-            background-size 14.285%
-    {prefix}8
-        &:empty
-            background-size 12.5%
-
-/*
-* Standard collumns 
-*/
-cols('.ft-')
-
-/*
-* Large screens
-*/
-@media(max-width: 1200px)
-    cols('.ft-xl-')
-
-/*
-* Medium screens
-*/
-@media(max-width: 992px)
-    cols('.ft-md-')
-
-/*
-* Small screen
-*/
-@media(max-width: 768px)
-    cols('.ft-sm-')
-
-/*
-* Extra small screens
-*/
-@media(max-width: 576px)
-    cols('.ft-xs-')
-
-/*
-* Forces the placeholder to be full screen
-*/
-.ft-full
-    &:empty
-        background-size cover
-
-/*
-* Restric the skeletons to only one
-*/
-.ft-single
-    &:empty
-        background-repeat no-repeat
-
-/*
-* Allow only one row of skeletons
-*/
-.ft-single-row
-    &:empty
-        background-repeat repeat-x
-
-/*
-* Allow only one column of skeletons
-*/
-.ft-single-column
-    &:empty
-        background-repeat repeat-y

@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "stylus --watch test/*.styl -o test"
+    "test": "stylus --watch test/*.styl -o test",
+    "build": "stylus bundle.styl -o dist"
   },
   "repository": {
     "type": "git",
