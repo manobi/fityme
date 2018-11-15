@@ -112,4 +112,4 @@ circle(size, x, y, fill, anim = false)
     y = positions[1]
     trans = positions[2]
     
-    "<circle fill='" + fill + "' cx='" + x + "' cy='" + y + "' r='" + size + "' transform='" + trans + "' />"
+    "<circle fill='" + replace('#', '%23', '' + fill) + "' cx='" + x + "' cy='" + y + "' r='" + size + "' transform='" + trans + "' />"
